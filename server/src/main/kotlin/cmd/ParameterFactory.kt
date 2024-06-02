@@ -3,9 +3,9 @@ package com.example.cmd
 import org.springframework.stereotype.Component
 
 @Component
-class ParameterFactory : IParameterFactory {
+class ParameterFactory {
 
-	override fun getParameters(args: Array<String>): IParameterProvider {
+	fun getParameters(args: Array<String>): IParameterProvider {
 		return CmdParser(args)
 	}
 }
